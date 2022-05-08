@@ -1,7 +1,7 @@
 FROM tomcat:8-jre11
 LABEL "Project"="BLB"
 LABEL "Author"="BE-LIKE-BRO"
-RUN rm-r /usr/local/tomcat/webapps/*
+RUN sudo rm-r /usr/local/tomcat/webapps/*
 COPY target/BLB.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
